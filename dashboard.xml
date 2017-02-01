@@ -1,0 +1,157 @@
+<xml version="1.0">
+<dashboard>
+	<widget field="fwdTime" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="751"/>
+	</widget>
+	<widget field="MarksFound2" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.BooleanBox">
+		<location x="783" y="867"/>
+		<width>164</width>
+	</widget>
+	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.Image">
+		<location x="732" y="899"/>
+		<property name="Image File" value="D:\Drive\2017 Robot\stopclimb.png"/>
+		<property name="Maintain Aspect Ratio" value="true"/>
+	</static-widget>
+	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.Image">
+		<location x="508" y="901"/>
+		<property name="Image File" value="D:\Drive\2017 Robot\point.png"/>
+		<property name="Maintain Aspect Ratio" value="true"/>
+	</static-widget>
+	<widget field="ReachedEnd" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.BooleanBox">
+		<location x="719" y="894"/>
+		<width>222</width>
+		<height>141</height>
+		<property name="Color to show when true" value="255.0.0.255"/>
+		<property name="Color to show when false" value="0.255.0.255"/>
+	</widget>
+	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.CameraServerViewer">
+		<location x="-1" y="0"/>
+		<width>1002</width>
+		<height>750</height>
+		<property name="Camera Choice" value="USB Camera 1"/>
+	</static-widget>
+	<widget field="Climb" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="582" y="756"/>
+	</widget>
+	<widget field="Eject Rope" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="554" y="788"/>
+	</widget>
+	<widget field="Autonomous Command" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="482" y="819"/>
+	</widget>
+	<widget field="Open Gear Peg" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="529" y="850"/>
+	</widget>
+	<widget field="PegPos" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.FormattedField">
+		<location x="740" y="774"/>
+		<width>129</width>
+		<property name="Background" value="242.242.242.255"/>
+		<property name="Font Size" value="72"/>
+	</widget>
+	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.Image">
+		<location x="861" y="775"/>
+		<width>87</width>
+		<height>92</height>
+		<property name="Image File" value="D:\Drive\2017 Robot\percent.png"/>
+		<property name="Maintain Aspect Ratio" value="true"/>
+	</static-widget>
+	<widget field="IsInside" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.BooleanBox">
+		<location x="496" y="894"/>
+		<width>196</width>
+		<height>140</height>
+	</widget>
+</dashboard>
+<live-window>
+	<widget field="Driving" type="LW Subsystem" class="edu.wpi.first.smartdashboard.livewindow.elements.LWSubsystem">
+		<widget field="Rear Right" type="CANSpeedController" class="edu.wpi.first.smartdashboard.livewindow.elements.CANSpeedController">
+			<location x="6" y="18"/>
+			<height>157</height>
+			<width>309</width>
+		</widget>
+		<widget field="Rear Left" type="CANSpeedController" class="edu.wpi.first.smartdashboard.livewindow.elements.CANSpeedController">
+			<location x="6" y="175"/>
+			<height>157</height>
+			<width>309</width>
+		</widget>
+		<widget field="Front Left" type="CANSpeedController" class="edu.wpi.first.smartdashboard.livewindow.elements.CANSpeedController">
+			<location x="6" y="332"/>
+			<height>157</height>
+			<width>309</width>
+		</widget>
+		<widget field="Front Right" type="CANSpeedController" class="edu.wpi.first.smartdashboard.livewindow.elements.CANSpeedController">
+			<location x="6" y="489"/>
+			<height>157</height>
+			<width>309</width>
+		</widget>
+		<location x="18" y="23"/>
+		<width>321</width>
+		<height>653</height>
+	</widget>
+	<widget field="Ungrouped" type="LW Subsystem" class="edu.wpi.first.smartdashboard.livewindow.elements.LWSubsystem">
+		<widget field="AnalogInput[0]" type="Analog Input" class="edu.wpi.first.smartdashboard.livewindow.elements.SingleNumberDisplay">
+			<location x="6" y="18"/>
+			<height>22</height>
+			<width>88</width>
+		</widget>
+		<location x="455" y="315"/>
+		<width>100</width>
+		<height>47</height>
+	</widget>
+	<widget field="Gears" type="LW Subsystem" class="edu.wpi.first.smartdashboard.livewindow.elements.LWSubsystem">
+		<widget field="Double Solenoid 1" type="Double Solenoid" class="edu.wpi.first.smartdashboard.livewindow.elements.RelayController">
+			<location x="6" y="18"/>
+			<height>22</height>
+			<width>176</width>
+		</widget>
+		<widget field="Solenoid" type="Double Solenoid" class="edu.wpi.first.smartdashboard.livewindow.elements.RelayController">
+			<location x="6" y="40"/>
+			<height>22</height>
+			<width>176</width>
+		</widget>
+		<widget field="Sensor" type="Analog Input" class="edu.wpi.first.smartdashboard.livewindow.elements.SingleNumberDisplay">
+			<location x="6" y="62"/>
+			<height>22</height>
+			<width>176</width>
+		</widget>
+		<location x="464" y="13"/>
+		<width>188</width>
+		<height>91</height>
+	</widget>
+	<widget field="Climbing" type="LW Subsystem" class="edu.wpi.first.smartdashboard.livewindow.elements.LWSubsystem">
+		<widget field="Left" type="Speed Controller" class="edu.wpi.first.smartdashboard.livewindow.elements.SpeedController">
+			<location x="6" y="18"/>
+			<height>51</height>
+			<width>309</width>
+		</widget>
+		<widget field="Right" type="Speed Controller" class="edu.wpi.first.smartdashboard.livewindow.elements.SpeedController">
+			<location x="6" y="69"/>
+			<height>51</height>
+			<width>309</width>
+		</widget>
+		<widget field="Sensor" type="Digital Input" class="edu.wpi.first.smartdashboard.livewindow.elements.DigitalInputDisplay">
+			<location x="6" y="120"/>
+			<height>22</height>
+			<width>309</width>
+		</widget>
+		<location x="469" y="131"/>
+		<width>321</width>
+		<height>149</height>
+	</widget>
+</live-window>
+	<hidden field="Driver Camera"/>
+	<hidden field="imgWidth"/>
+	<hidden field="LeftMarkX"/>
+	<hidden field="Dist"/>
+	<hidden field="RightMarkWidth"/>
+	<hidden field="MarksFound"/>
+	<hidden field="LeftMarkHeight"/>
+	<hidden field="LeftMarkWidth"/>
+	<hidden field="RRumble"/>
+	<hidden field="MainCamFocus"/>
+	<hidden field="RightMarkHeight"/>
+	<hidden field="Gear Camera"/>
+	<hidden field="LRumble"/>
+	<hidden field="imgHeight"/>
+	<hidden field="RightMarkX"/>
+	<hidden field="GearCamFocus"/>
+</xml>
