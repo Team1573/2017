@@ -60,7 +60,8 @@ def process(frame, pipeline):
     else:
         table.putBoolean('MarksFound', False)
         pass
-        
+    
+    contourframe = cv2.resize(contourframe, (725, 600))
     cv2.imshow("contours", contourframe)
     cv2.waitKey(1)
 
